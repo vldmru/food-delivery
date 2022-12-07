@@ -1,3 +1,28 @@
+.list {
+  list-style: none;
+}
+
+.customers__container {
+  width: 100%;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include tablet {
+    padding-left: 32px;
+    padding-right: 32px;
+    max-width: 768px;
+  }
+
+  @include desctop {
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 1280px;
+  }
+}
+
 .customers {
   background-color: var(--second-bcg);
 }
@@ -9,6 +34,11 @@
   font-size: 28px;
   line-height: calc(33 / 28);
   color: var(--main-text);
+
+  @include tablet {
+    font-size: 42px;
+    line-height: calc(49 / 42);
+  }
 }
 
 .customers__text {
@@ -24,32 +54,85 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  @include desctop {
+    flex-direction: row;
+    gap: 139px;
+  }
 }
 
 .customers-list__item {
   padding: 8px;
   width: 100%;
-  min-height: 247px;
+  height: 247px;
   background-color: var(--main-bcg);
   border-radius: 0 30px 30px 30px;
+
+  @include tablet {
+    padding: 12px;
+    height: 244px;
+  }
+
+  @include desctop {
+    padding: 14px;
+    width: 501px;
+    height: 227px;
+  }
+}
+
+.customers-mark {
+  margin-bottom: 28px;
+  display: flex;
+  gap: 4px;
+}
+
+.customers-mark__item {
+  height: 16px;
+}
+
+.customers-mark__icon {
+  fill: var(--second-bcg);
 }
 
 .customers-list__respond {
   margin-bottom: 40px;
 
+  height: 95px;
   font-weight: 700;
   font-size: 16px;
   line-height: calc(19 / 16);
   color: var(--main-text);
+
+  @include tablet {
+    height: 84px;
+    font-size: 18px;
+    line-height: calc(21 / 18);
+  }
+
+  @include desctop {
+    height: 63px;
+  }
 }
 
 .customers-list__box {
   display: flex;
-  border-right: 1px solid tomato;
+  align-items: center;
+  border-right: 1px solid var(--accent-color-second);
+  width: 160px;
   height: 52px;
 }
 
+.customers-list_person {
+  margin-left: 16px;
+}
+
 .customers-list__name {
+  margin-bottom: 2px;
   font-weight: 500;
   font-size: 14px;
   line-height: calc(21 / 14);
