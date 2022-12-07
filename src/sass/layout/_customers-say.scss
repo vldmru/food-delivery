@@ -1,5 +1,5 @@
 .customers {
-  background-color: aqua;
+  background-color: var(--second-bcg);
 }
 
 .customers__title {
@@ -8,7 +8,7 @@
   font-weight: 700;
   font-size: 28px;
   line-height: calc(33 / 28);
-  color: #2c2c2c;
+  color: var(--main-text);
 }
 
 .customers__text {
@@ -17,7 +17,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: calc(16 / 14);
-  color: #2c2c2c;
+  color: var(--main-text);
 }
 
 .customers-list {
@@ -28,9 +28,9 @@
 
 .customers-list__item {
   padding: 8px;
-  max-width: 280px;
+  width: 100%;
   min-height: 247px;
-  background-color: aliceblue;
+  background-color: var(--main-bcg);
   border-radius: 0 30px 30px 30px;
 }
 
@@ -40,5 +40,25 @@
   font-weight: 700;
   font-size: 16px;
   line-height: calc(19 / 16);
-  color: #2c2c2c;
+  color: var(--main-text);
+}
+
+.customers-list__box {
+  display: flex;
+  border-right: 1px solid tomato;
+  height: 52px;
+}
+
+.customers-list__name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(21 / 14);
+  color: var(--main-text);
+}
+
+.customers-list__position {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(21 / 14);
+  color: var(--main-text);
 }
