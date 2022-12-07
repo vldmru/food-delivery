@@ -1,4 +1,10 @@
+@import './utils/variables';
+@import './utils/visually-hidden';
+@import './utils/mixins';
+
 @import './base/common';
+@import './base/container';
+@import './base/section';
 
 @import './components/link-drop';
 @import './components/list-drop';
@@ -11,6 +17,3 @@
 @import './layout/offerings';
 @import './layout/subscribe';
 
-@import './utils/variables';
-@import './utils/visually-hidden';
-@import './utils/mixins';
