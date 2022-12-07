@@ -25,6 +25,13 @@
 
 .customers {
   background-color: var(--second-bcg);
+
+  @include tablet {
+    padding-bottom: 120px;
+  }
+  @include desctop {
+    padding-bottom: 100px;
+  }
 }
 
 .customers__title {
@@ -48,6 +55,11 @@
   font-size: 14px;
   line-height: calc(16 / 14);
   color: var(--main-text);
+
+  @include tablet {
+    font-size: 16px;
+    line-height: calc(19 / 16);
+  }
 }
 
 .customers-list {
