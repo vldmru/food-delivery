@@ -5,16 +5,17 @@
    margin-right: auto;
    padding-left: 20px;
    padding-right: 20px;
+}
 
-   @include tablet {
-      width: 768px;
-      padding-right: 32px;
-      padding-left: 32px;
-   }
+  @include tablet {
+    width: 768px;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
 
-   @include desctop {
-      width: 1280px;
-      padding-left: 16px;
-      padding-right: 16px;
-   }
+  @include desctop {
+    width: 1280px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
