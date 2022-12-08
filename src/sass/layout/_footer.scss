@@ -1,56 +1,82 @@
 .footer {
   display: flex;
   width: 100%;
-  justify-content: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+
   box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
   padding-top: 60px;
   padding-bottom: 60px;
-  max-width: 480px;
-  height: 619px;
+
+  background: var(--main-bcg);
+
+  background-image: url(../images/footer/footermobile/orange-480-@1x.png),
+    url(../images/footer/footermobile/apple-480-@1x.png),
+    url(../images/footer/footermobile/fruts-480-@1x.png);
+
+  @include retina-bgi {
+    background-image: url(../images/footer/footermobile/orange-480-@2x.png),
+      url(../images/footer/footermobile/apple-480-@2x.png),
+      url(../images/footer/footermobile/fruts-480-@2x.png);
+  }
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: initial;
+  background-position: right center, left center, center bottom;
 
   @include tablet {
     padding-top: 100px;
     padding-bottom: 100px;
-  }
-
-  background: var(--main-bcg);
-
-  background-image: url(../images/footer/fruitfooter-480-@1x.png);
-
-  @include retina-bgi {
-    background-image: url(../images/footer/fruitfooter-480-@2x.png);
-  }
-
-  @include tablet {
-    height: 506px;
-    max-width: 768px;
-    background-image: url(../images/footer/fruitfooter-768-@1x.png);
+    background-image: url(../images/footer/footertablet/apple-right-768-@1x.png),
+      url(../images/footer/footertablet/drops-right-768-@1x.png),
+      url(../images/footer/footertablet/drops-left-768-@1x.png),
+      url(../images/footer/footertablet/apple-left-768-@1x.png),
+      url(../images/footer/footertablet/banana-768-@1x.png),
+      url(../images/footer/footertablet/orange-left-768-@1x.png),
+      url(../images/footer/footertablet/orange-768-@1x.png);
 
     @include retina-bgi {
-      background-image: url(../images/footer/fruitfooter-768-@2x.png);
+      background-image: url(../images/footer/footertablet/apple-right-768-@2x.png),
+        url(../images/footer/footertablet/drops-right-768-@2x.png),
+        url(../images/footer/footertablet/drops-left-768-@2x.png),
+        url(../images/footer/footertablet/apple-left-768-@2x.png),
+        url(../images/footer/footertablet/banana-768-@2x.png),
+        url(../images/footer/footertablet/orange-left-768-@2x.png),
+        url(../images/footer/footertablet/orange-768-@2x.png);
     }
+
+    background-position: bottom right, bottom right 105px, bottom left 110px,
+      bottom left 197px, bottom right 240px, bottom left -15px, right center;
   }
 
   @include desctop {
-    height: 266px;
-    max-width: 1280px;
-
-    background-image: url(../images/footer/fruitfooter-1280-@1x.png);
+    background-image: url(../images/footer/footerdesktop/apple-right-1280-@1x.png),
+      url(../images/footer/footerdesktop/drops-right-1280-@1x.png),
+      url(../images/footer/footerdesktop/drops-central-1280-@1x.png),
+      url(../images/footer/footerdesktop/orange-central-1280-@1x.png),
+      url(../images/footer/footerdesktop/banana-1280-@1x.png),
+      url(../images/footer/footerdesktop/drops-left-1280-@1x.png),
+      url(../images/footer/footerdesktop/apple-left-1280-@1x.png),
+      url(../images/footer/footerdesktop/orange-left-1280-@1x.png);
 
     @include retina-bgi {
-      background-image: url(../images/footer/fruitfooter-1280-@2x.png);
+      background-image: url(../images/footer/footerdesktop/apple-right-1280-@2x.png),
+        url(../images/footer/footerdesktop/drops-right-1280-@2x.png),
+        url(../images/footer/footerdesktop/drops-central-1280-@2x.png),
+        url(../images/footer/footerdesktop/orange-central-1280-@2x.png),
+        url(../images/footer/footerdesktop/banana-1280-@2x.png),
+        url(../images/footer/footerdesktop/drops-left-1280-@2x.png),
+        url(../images/footer/footerdesktop/apple-left-1280-@2x.png),
+        url(../images/footer/footerdesktop/orange-left-1280-@2x.png);
     }
+
+    background-position: bottom right, bottom right 118px, bottom right 405px,
+      bottom right 465px, bottom right 282px, bottom left 185px,
+      bottom left 280px, bottom left;
   }
 }
 
 .footer__container {
   display: flex;
   flex-direction: column;
-
-  background-position: bottom;
-  background-size: cover;
 }
 
 .footer__title {
@@ -83,12 +109,33 @@
   background-color: #ffffff;
   border: 0.854167px solid var(--second-bcg);
 
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
 
   @include tablet {
     margin-right: 13px;
     margin-bottom: 12px;
   }
+
+  &:not(:placeholder-shown):valid {
+    border: 0.854167px solid var(--accent-color-second);
+  }
+
+  &:not(:placeholder-shown):invalid {
+    border: 0.854167px solid #ff705d;
+  }
+}
+.footer-subscription__item {
+  position: relative;
+}
+
+.error {
+  position: absolute;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 150%;
+  color: #ff705d;
+  margin-top: 4px;
+  left: 0;
 }
 
 .footer-subscription__btn {
@@ -101,6 +148,7 @@
   border-radius: 30px;
   display: block;
   margin-bottom: 20px;
+  margin-top: 25px;
   margin-left: auto;
 
   color: var(--main-text);
