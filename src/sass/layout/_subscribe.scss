@@ -4,8 +4,8 @@
 
 .subscribe {
   position: relative;
-  background-color: var(--main-bcg);
   padding-top: 56px;
+  padding-bottom: 60px;
 
   @include tablet {
     padding-top: 82px;
@@ -13,7 +13,8 @@
   }
 
   @include desctop {
-    padding-top: 80px;
+    padding-top: 0;
+    margin-top: -20px;
   }
 }
 
@@ -112,6 +113,14 @@
     line-height: calc(18 / 12);
     color: #505050;
   }
+
+  &:not(:placeholder-shown):valid {
+    border: 0.854167px solid var(--accent-color-second);
+  }
+
+  &:not(:placeholder-shown):invalid {
+    border: 0.854167px solid #ff705d;
+  }
 }
 
 .subscribe__button {
@@ -136,11 +145,11 @@
 .subscribe::before {
   position: absolute;
   top: 0;
-  left: 0;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   content: '';
   display: block;
-  width: 100%;
+  width: 280px;
   height: 78px;
   background-repeat: no-repeat;
   background-size: contain;
@@ -162,9 +171,9 @@
   @include tablet {
     width: 281px;
     height: 136px;
-
-    left: 50%;
-    transform: translate(25%, -50%);
+    top: -74px;
+    right: 0;
+    transform: translate(25%, 0);
 
     background-image: url(../images/subscribe/banan-1280.png);
     @include retina-bgi {
@@ -175,7 +184,7 @@
   @include desctop {
     width: 608px;
     height: 266px;
-    top: 34px;
+    top: -46px;
     margin-left: 34px;
     transform: translate(0, 0);
   }
