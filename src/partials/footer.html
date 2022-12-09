@@ -10,19 +10,19 @@
           </a>
           <ul class="nav__list nav__list-footer list-drop">
             <li class="nav__item ">
-              <a class="nav__link  nav__link--current decoration" href="">Home</a>
+              <a class="nav__link  nav__link--current decoration" href="./index.html">Home</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link decoration" href="">About</a>
+              <a class="nav__link decoration" href="#">About</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link decoration" href="">Service</a>
+              <a class="nav__link decoration" href="#">Service</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link decoration" href="">Menu</a>
+              <a class="nav__link decoration" href="#">Menu</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link decoration" href="">Contact</a>
+              <a class="nav__link decoration" href="#">Contact</a>
             </li>
           </ul>
         </nav>
@@ -64,19 +64,25 @@
       
     </footer>
 
-     <div class="menu-container js-menu-container" id="mobile-menu">
-      <button class="menu-btn js-close-menu">
-        <svg width="24px" height="24px">
-          <use class="menu-btn__icon" href="./images/symbol-defs.svg#close"></use>
+     <div class="mobile-menu js-menu-container" id="mobile-menu">
+      <button class="menu-btn mobile-menu__menu-btn js-close-menu">
+        <svg class="menu-btn__icon" width="24px" height="24px">
+          <use  href="./images/symbol-defs.svg#close"></use>
         </svg>
         
       </button>
 
-      <ul class="mobile-menu">
-        <li><a href="" class="link">Home</a></li>
-        <li><a href="" class="link">About</a></li>
-        <li><a href="" class="link">Service</a></li>
-        <li><a href="" class="link">Contact</a></li>
+      <ul class="mobile-menu__list list-drop">
+        <li class="mobile-menu__item " >
+          <a href="./index.html" class="mobile-menu__link decoration mobile-menu__border-top">Home</a></li>
+        <li class="mobile-menu__item" >
+          <a href="#" class="mobile-menu__link decoration">About</a></li>
+        <li class="mobile-menu__item" >
+          <a href="#" class="mobile-menu__link decoration">Service</a></li>
+        <li class="mobile-menu__item" >
+          <a href="#" class="mobile-menu__link decoration">Menu</a></li>
+        <li class="mobile-menu__item" >
+          <a href="#" class="mobile-menu__link decoration mobile-menu__border-bottom">Contact</a></li>
       </ul>
     </div>
 
