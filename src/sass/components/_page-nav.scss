@@ -11,8 +11,8 @@
 }
 
 .logo {
-  width: 69px;
-  height: 51px;
+  width: 66px;
+  height: 52px;
   margin-right: 81px;
 
   @include tablet {
@@ -39,6 +39,7 @@
 .nav__link:hover,
 .nav__link:focus {
   color: var(--accent-color);
+  text-decoration: underline;
 }
 
 .nav__link:hover.nav__link--current,
