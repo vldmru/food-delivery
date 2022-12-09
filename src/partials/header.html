@@ -9,35 +9,42 @@
   <body>
     <header class="header">
       <div class="header__container container">
-        <nav class="page-nav">
-          <a href="./index.html" class="logo__header">
-            <svg width="66px" height="52px">
-              <use href="./images/symbol-defs.svg#logo" class="logo_link"></use>
-            </svg>
-          </a>
-          <ul class="nav__list list-drop">
-            <li class="nav__item">
-              <a
-                class="nav__link nav__link--current decoration"
-                href="./index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav__item">
-              <a class="nav__link decoration" href="#">About</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link decoration" href="#">Service</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link decoration" href="#">Menu</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link decoration" href="#">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <button class="modal-btn" type="button">Order Now</button>
+        <a href="./index.html" class="logo__header">
+          <svg width="66px" height="52px">
+            <use href="./images/symbol-defs.svg#logo" class="logo_link"></use>
+          </svg>
+        </a>
+        <div class="header__list">
+          <nav class="header-page__nav">
+            <ul class="header-nav__list nav__list list-drop">
+              <li class="nav__item">
+                <a
+                  class="nav__link nav__link--current decoration"
+                  href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav__item">
+                <a class="nav__link decoration" href="#">About</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link decoration" href="#">Service</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link decoration" href="#">Menu</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link decoration" href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="header__btn" type="button">Order Now</button>
+        </div>
+        <button class="mobile-btn js-open-menu" type="button">
+          <svg class="mobile-btn__icon" width="28px" height="28px">
+            <use href="./images/symbol-defs.svg#menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
   </body>
