@@ -76,6 +76,7 @@
 .mobile-menu__border-bottom {
   border-radius: 0 0 30px 30px;
 }
+.mobile-menu__link:hover,
 .mobile-menu__link:focus {
   background-color: var(--accent-color);
   border: 1px solid var(--main-bcg);
