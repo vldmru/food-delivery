@@ -61,7 +61,14 @@
 .logo__header {
   display: block;
   padding: 10px 0;
+  transform: rotate(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   //   margin-right: 735px;
+}
+
+.logo__header:hover,
+.logo__header:focus {
+  transform: rotate(-30deg);
 }
 
 .header-page__nav {

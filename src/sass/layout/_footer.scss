@@ -81,6 +81,8 @@
 
 .footer__logo {
   margin-right: 81px;
+  transform: rotate(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @include tablet {
     margin-right: 114px;
@@ -88,6 +90,11 @@
   @include desctop {
     margin-right: 148px;
   }
+}
+
+.footer__logo:hover,
+.footer__logo:focus {
+  transform: rotate(-30deg);
 }
 
 .footer-page__nav {
