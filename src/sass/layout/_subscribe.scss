@@ -4,7 +4,7 @@
 
 .subscribe {
   position: relative;
-  padding-top: 56px;
+  padding-top: 52px;
   padding-bottom: 60px;
 
   @include tablet {
@@ -68,6 +68,7 @@
   color: var(--main-text);
 
   @include tablet {
+    margin-bottom: 24px;
     font-size: 16px;
     line-height: calc(24 / 16);
   }
@@ -84,13 +85,17 @@
 .subscribe__label {
   display: block;
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   text-align: center;
 
   @include tablet {
     margin-right: 22px;
+    margin-bottom: 0;
     display: inline-block;
     width: 395px;
+  }
+  @include desctop {
+    margin-right: 32px;
   }
 }
 
@@ -131,6 +136,7 @@
 }
 
 .subscribe__warning {
+  display: block;
   position: absolute;
   font-weight: 400;
   font-size: 10px;
