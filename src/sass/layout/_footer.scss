@@ -79,6 +79,28 @@
   flex-direction: column;
 }
 
+.footer__logo {
+  margin-right: 81px;
+
+  @include tablet {
+    margin-right: 114px;
+  }
+  @include desctop {
+    margin-right: 148px;
+  }
+}
+
+.footer-page__nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav__list-footer {
+  @include tablet {
+    padding-top: 18px;
+  }
+}
+
 .footer__title {
   font-weight: 500;
   font-size: 14px;
