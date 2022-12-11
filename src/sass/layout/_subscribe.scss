@@ -172,7 +172,7 @@
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(0);
   content: '';
   display: block;
   width: 280px;
@@ -199,7 +199,7 @@
     height: 136px;
     top: -74px;
     right: 0;
-    transform: translate(25%, 0);
+    transform: translate(25%, 0) rotate(0);
 
     background-image: url(../images/subscribe/banan-1280.png);
     @include retina-bgi {
@@ -212,6 +212,25 @@
     height: 266px;
     top: -46px;
     margin-left: 34px;
-    transform: translate(0, 0);
+    transform: translate(0, 0) rotate(0);
+  }
+}
+
+.active.subscribe::before {
+  transform: translate(-50%, -50%) rotate(360deg);
+  transition: transform 2000ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+@include tablet {
+  .active.subscribe::before {
+    transform: translate(25%, 0) rotate(360deg);
+    transition: transform 2000ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  }
+}
+
+@include desctop {
+  .active.subscribe::before {
+    transform: translate(0, 0) rotate(360deg);
+    transition: transform 2000ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   }
 }
